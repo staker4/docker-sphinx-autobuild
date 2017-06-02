@@ -34,4 +34,4 @@ You must specify your localhost-port to map to container-port 8000 and on which 
 $ docker run -v /path/to/sphinx-doc:/sphinx-doc staker4/sphinx-autobuild make html
 ```
 
-You must overwrite the default COMMAND with **make html**. We can also remove the port mapping option **-v 8000:8000** since we dont serve the documentation.
+You must overwrite the default COMMAND with **make html**. We can also remove the port mapping option **-p 8000:8000** since we dont serve the documentation.
