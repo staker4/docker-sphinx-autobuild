@@ -14,7 +14,7 @@ This image uses [sphinx-autobuild](https://github.com/GaretJax/sphinx-autobuild)
 
 ### Documentation location
 
-You must specify the location to your local sphinx-doc by mounting the **sphinx-doc** volume
+You must specify the location to your local sphinx-doc by mounting the **sphinx-doc** VOLUME.
 
 ```bash
 -v /path/to/sphinx-doc:/sphinx-doc
@@ -22,7 +22,7 @@ You must specify the location to your local sphinx-doc by mounting the **sphinx-
 
 ### Served port
 
-You must specify your localhost port on which the documentation shall be served : [sphinx-autobuild](https://github.com/GaretJax/sphinx-autobuild)
+You must specify your localhost-port to map to container-port 8000 and on which the documentation shall be served.
 
 ```bash
 -p <localhost port>:8000
