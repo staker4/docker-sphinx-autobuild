@@ -1,6 +1,6 @@
 # Docker sphinx-autobuild
 
-This is the Git repo of the Docker image for [sphinx-autobuild](https://registry.hub.docker.com/r/staker4/sphinx-autobuild).
+This is the repo of the Docker image for [sphinx-autobuild](https://hub.docker.com/r/staker4/sphinx-autobuild/).
 
 # How to use this image
 
