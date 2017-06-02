@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-MAINTAINER staker4
+MAINTAINER Raymond Tiefengraber
 
 # Install apt packages
 RUN apt-get update \
@@ -20,13 +20,11 @@ ENV   LANG C.UTF-8
 ENV   LANGUAGE C.UTF-8
 ENV   LC_ALL C.UTF-8
 
-ENV SPHINX_AUTOBUILD_HOST 0.0.0.0
-ENV SPHINX_AUTOBUILD_PORT 8000
-
-EXPOSE $SPHINX_AUTOBUILD_PORT
+# Expose sphinx-autobuild documentation served port
+EXPOSE 8000
 
 VOLUME  /sphinx-doc
 
-# Run autobuild
+# Set runtime command to autobuild and serve documentation
 WORKDIR /sphinx-doc
-ENTRYPOINT sphinx-autobuild -b html --host $SPHINX_AUTOBUILD_HOST --port $SPHINX_AUTOBUILD_PORT --poll /sphinx-doc /sphinx-doc/_build/html
+CMD sphinx-autobuild -b html --host 0.0.0.0 --port 8000 --poll /sphinx-doc /sphinx-doc/_build/html
